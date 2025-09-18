@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Finance Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .dashboard {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .card p {
+      font-size: 1.5rem;
+      color: #27ae60;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #2c3e50;
+      color: white;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Personal Finance Dashboard</h1>
+  </header>
+
+  <div class="dashboard">
+    <div class="card">
+      <h3>Monthly Income</h3>
+      <p id="income">$0</p>
+    </div>
+    <div class="card">
+      <h3>Monthly Expenses</h3>
+      <p id="expenses">$0</p>
+    </div>
+    <div class="card">
+      <h3>Savings</h3>
+      <p id="savings">$0</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Finance Tracker
+  </footer>
+
+  <script>
+    // Sample Data
+    const income = 5000;
+    const expenses = 3200;
+    const savings = income - expenses;
+
+    document.getElementById("income").innerText = "$" + income;
+    document.getElementById("expenses").innerText = "$" + expenses;
+    document.getElementById("savings").innerText = "$" + savings;
+  </script>
+</body>
+</html>
